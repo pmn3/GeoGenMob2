@@ -100,10 +100,19 @@
                 android:layout_height="wrap_content">
             </Button>                        
          </TableRow>
-
    </TableLayout>
-
-      
-
-
+    <TextView
+                android:text="settings:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tableLayout1"
+                android:id="@+id/textView5" />                      
+    <TextView
+                android:text="message:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView5"
+                android:id="@+id/textView6" />    
 </RelativeLayout>
