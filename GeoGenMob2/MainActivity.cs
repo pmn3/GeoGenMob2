@@ -3,8 +3,13 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
+using Android.Locations;
+
+using Xamarin.Essentials;
 
 using Geocore;
+//using GeoRecive;
+
 
 
 namespace GeoGenMob2
@@ -19,6 +24,8 @@ namespace GeoGenMob2
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
             //==========
+            //LocationManager locationManager;
+            //===========
             EditText urltext = FindViewById<EditText>(Resource.Id.textInputEditText1);
             EditText usertext = FindViewById<EditText>(Resource.Id.textInputEditText2);
             EditText devtext = FindViewById<EditText>(Resource.Id.textInputEditText3);
@@ -29,6 +36,8 @@ namespace GeoGenMob2
 
             Button savebutton = FindViewById<Button>(Resource.Id.button1);
             Button startbutton = FindViewById<Button>(Resource.Id.button2);
+            Button geobutton = FindViewById<Button>(Resource.Id.button3);
+
             //==========
             savebutton.Click += (sender, e) =>
             {
@@ -52,6 +61,11 @@ namespace GeoGenMob2
                     printmess.Text = "В поле counter укажите число."; 
                 }
                
+            };
+
+            geobutton.Click += (sender, e) =>
+            {
+                
             };
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
