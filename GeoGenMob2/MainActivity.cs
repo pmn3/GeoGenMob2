@@ -66,7 +66,12 @@ namespace GeoGenMob2
             GeoCoordinates GC = new GeoCoordinates();
             geobutton.Click += (sender, e) =>
             {
-                GC.ReciveGeo();
+                //printmess.Text = GC.ReciveGeo
+                //GC.ReciveGeo;
+                //double X0Latitude = 0;
+                //double Y0Longitude = 0;
+                //var coordinates0 = (X0Latitude, Y0Longitude);
+                double coordinates0 = GC.ReciveGeo().;
             };
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

@@ -18,10 +18,11 @@ namespace GeoRecive
     public class GeoCoordinates
     {
 
-        public async Task<double> ReciveGeo()
+        public async Task<(double XLatitude, double YLongitude)> ReciveGeo()
         {
-            double X;
-            double Y;
+            double XLatitude = 0;
+            double YLongitude = 0;
+            var coordinates = (XLatitude, YLongitude);
             try
             {
                 var request = new GeolocationRequest(GeolocationAccuracy.Medium);
@@ -29,9 +30,8 @@ namespace GeoRecive
 
                 if (location != null)
                 {
-                    X = location.Latitude;
-                    Y = location.Longitude;
-
+                   coordinates.XLatitude = location.Latitude;
+                   coordinates.YLongitude = location.Longitude;
                 }
             }
             catch (FeatureNotSupportedException fnsEx)
@@ -50,7 +50,7 @@ namespace GeoRecive
             {
                 // Unable to get location
             }
-            //return X;
+           return coordinates;
         }
     }
 }
