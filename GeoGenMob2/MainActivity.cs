@@ -8,8 +8,8 @@ using Android.Locations;
 using Xamarin.Essentials;
 
 using Geocore;
-//using GeoRecive;
 
+using GeoRecive;
 
 
 namespace GeoGenMob2
@@ -63,9 +63,10 @@ namespace GeoGenMob2
                
             };
 
+            GeoCoordinates GC = new GeoCoordinates();
             geobutton.Click += (sender, e) =>
             {
-                
+                GC.ReciveGeo();
             };
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
