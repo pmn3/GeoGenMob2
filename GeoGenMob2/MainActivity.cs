@@ -39,6 +39,11 @@ namespace GeoGenMob2
             Button geobutton = FindViewById<Button>(Resource.Id.button3);
 
             //==========
+            GeoCoordinates GC = new GeoCoordinates();
+            GC.InitGeoCoordinates();
+            GeoCoordinates GCcore = new GeoCoordinates();
+            GCcore.InitGeoCoordinates();
+            //===========
             savebutton.Click += (sender, e) =>
             {
                 //string url = urltext.Text;
@@ -63,8 +68,8 @@ namespace GeoGenMob2
                
             };
 
-            GeoCoordinates GC = new GeoCoordinates();
-            GC.InitGeoCoordinates();
+            //GeoCoordinates GC = new GeoCoordinates();
+            //GC.InitGeoCoordinates();
 
             geobutton.Click += (sender, e) =>
             {
