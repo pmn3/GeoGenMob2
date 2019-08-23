@@ -63,25 +63,17 @@ namespace GeoGenMob2
                
             };
 
+            GeoCoordinates GC = new GeoCoordinates();
+            GC.InitGeoCoordinates();
 
             geobutton.Click += (sender, e) =>
             {
-                GeoCoordinates GC = new GeoCoordinates();
-                //printmess.Text = GC.ReciveGeo
-                //GC.ReciveGeo;
-                //double X0Latitude = 0;
-                //double Y0Longitude = 0;
+                GC.InitGeoCoordinates();
+                double X0Latitude = GC.printXGeoCoordinates();
+                double Y0Longitude = GC.printYGeoCoordinates();
 
-                //var coordinates0 = (X0Latitude, Y0Longitude);
-                //coordinates0.X0Latitude = GC.ReciveGeo().Result.X1Latitude;
-                // coordinates0.Y0Longitude = GC.ReciveGeo().Result.Y1Longitude;
-                double X0Latitude = GC.ReciveGeo().Result.X1Latitude;
-                double Y0Longitude = GC.ReciveGeo().Result.Y1Longitude;
-                //var coordinates0 = GC.ReciveGeo();
-                // X0Latitude = coordinates.XLatitude;
-                //string tmpcoordinates = GC.ReciveGeo().Result;
-                printmess.Text = X0Latitude.ToString() + Y0Longitude.ToString();
-                //printmess.Text = coordinates0.X0Latitude.ToString()+ "\n" + coordinates0.Y0Longitude.ToString();
+                printmess.Text = X0Latitude.ToString() + ";" + Y0Longitude.ToString();
+                
             };
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

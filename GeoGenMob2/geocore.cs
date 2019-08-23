@@ -11,7 +11,7 @@ using System.Net.Http;
 using System.Web;
 using Newtonsoft.Json;
 
- 
+using GeoRecive; 
 
 namespace Geocore
 {
@@ -89,19 +89,27 @@ namespace Geocore
             string jsonstr = printJSON();
             GEO testgeo = JsonConvert.DeserializeObject<GEO>(jsonstr);
 
+           
+
             int n1 = int.Parse(n.ToString()); //перобразовываем из n - object в n1 int 
 
             try
             {
+                GeoCoordinates GCcore = new GeoCoordinates();
+                GCcore.InitGeoCoordinates();
                 for (int i = 0; i < n1; i++)
                 {
+                    GCcore.InitGeoCoordinates();
+                    testgeo.X = GCcore.XLatitude;
+                    testgeo.Y = GCcore.YLongitude;
+                    //testgeo.X = rnd.Next(99);
 
-                    testgeo.X = rnd.Next(99);
+                    //testgeo.Y = rnd.Next(99);
 
-                    testgeo.Y = rnd.Next(99);
+                    
 
                     string json = JsonConvert.SerializeObject(testgeo);
-                    Console.WriteLine("JSON: {0}", json);
+                    //Console.WriteLine("JSON: {0}", json);
 
                     var httpRequest = (HttpWebRequest)WebRequest.Create(testgeo.url0);
                     httpRequest.Method = "POST";

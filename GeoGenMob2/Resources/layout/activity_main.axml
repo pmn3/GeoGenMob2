@@ -116,7 +116,7 @@
                 android:layout_below="@id/textView5"
                 android:id="@+id/textView6" />
     <Button
-        android:text="GEO"
+        android:text="print GEO"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView6"
