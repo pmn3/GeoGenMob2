@@ -40,12 +40,13 @@ namespace GeoGenMob2
 
             //==========
 
+            //==========
             savebutton.Click += (sender, e) =>
             {
                 //string url = urltext.Text;
                 //printtext.SetText();
-                Geocore.Settings.SaveJSON(urltext.Text,usertext.Text,devtext.Text);
-                printtext.Text = "url: "+urltext.Text+"\n"+"user: "+usertext.Text+"\n"+"dev: "+devtext.Text;                
+                Geocore.Settings.SaveJSON(urltext.Text, usertext.Text, devtext.Text);
+                printtext.Text = "url: " + urltext.Text + "\n" + "user: " + usertext.Text + "\n" + "dev: " + devtext.Text;
             };
 
             startbutton.Click += (sender, e) =>
@@ -53,15 +54,15 @@ namespace GeoGenMob2
                 // int n0 = int.Parse(countertext.Text);
                 //countertext.Text = "2";
                 int n0;
-                if (int.TryParse(countertext.Text,out n0))
+                if (int.TryParse(countertext.Text, out n0))
                 {
                     Geocore.Settings.startSend(n0);
                 }
                 else
                 {
-                    printmess.Text = "В поле counter укажите число."; 
+                    printmess.Text = "В поле counter укажите число.";
                 }
-               
+
             };
 
             GeoCoordinates GC = new GeoCoordinates();
@@ -74,7 +75,7 @@ namespace GeoGenMob2
                 double Y0Longitude = GC.printYGeoCoordinates();
 
                 printmess.Text = X0Latitude.ToString() + ";" + Y0Longitude.ToString();
-                
+
             };
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

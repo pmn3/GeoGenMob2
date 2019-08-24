@@ -13,24 +13,26 @@ using System.Web;
 using Xamarin.Essentials;
 
 
-namespace GeoRecive 
+namespace GeoRecive
 {
     public class GeoCoordinates
     {
 
-       public double XLatitude=0;
-       public double YLongitude=0;
-       
-       public void InitGeoCoordinates()
+        public double XLatitude;
+        public double YLongitude;
+
+        //public void InitGeoCoordinates()
+        public async Task InitGeoCoordinates()
+
         {
-            ReciveGeo();
+            await ReciveGeo();
         }
 
         public double printXGeoCoordinates()
         {
             double Xp = XLatitude;
             return Xp;
-            
+
         }
         public double printYGeoCoordinates()
         {
@@ -40,40 +42,42 @@ namespace GeoRecive
         }
 
         public async Task ReciveGeo()
+        {
+
+            try
             {
+                //var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
+                var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
 
-                try
-                {
-                    //var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
-                    var request = new GeolocationRequest(GeolocationAccuracy.Medium);
+                var location = await Geolocation.GetLocationAsync(request);
 
-                    var location = await Geolocation.GetLocationAsync(request);
+                string teststop = "";
 
-                    if (location != null)
-                    {
-                        XLatitude = location.Latitude;
-                        YLongitude = location.Longitude;
-                    }               
-                }
-                catch (FeatureNotSupportedException fnsEx)
+                if (location != null)
                 {
-                    // Handle not supported on device exception
+                    XLatitude = location.Latitude;
+                    YLongitude = location.Longitude;
                 }
-                catch (FeatureNotEnabledException fneEx)
-                {
-                    // Handle not enabled on device exception
-                }
-                catch (PermissionException pEx)
-                {
-                    // Handle permission exception
-                }
-                catch (Exception ex)
-                {
-                    // Unable to get location
-                }
-                // return coordinates;
-                // return result;
             }
-        
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Handle not supported on device exception
+            }
+            catch (FeatureNotEnabledException fneEx)
+            {
+                // Handle not enabled on device exception
+            }
+            catch (PermissionException pEx)
+            {
+                // Handle permission exception
+            }
+            catch (Exception ex)
+            {
+                // Unable to get location
+            }
+            // return coordinates;
+            // return result;
+        }
+
     }
 }

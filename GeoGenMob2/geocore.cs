@@ -11,12 +11,12 @@ using System.Net.Http;
 using System.Web;
 using Newtonsoft.Json;
 
-using GeoRecive; 
+using GeoRecive;
 
 namespace Geocore
 {
-   // public static class Settings
-   public class Settings
+    // public static class Settings
+    public class Settings
     {
         class GEO
         {
@@ -29,7 +29,7 @@ namespace Geocore
 
         //SaveJSON  - Сохраняем настройки в файл JSON (Сереализация)
         public static void SaveJSON(string url1, string user1, string dev1)
-      // public async Task SaveJSON(string url1, string user1, string dev1)
+        // public async Task SaveJSON(string url1, string user1, string dev1)
         {
             GEO initgeo = new GEO();
             initgeo.url0 = url1;
@@ -40,10 +40,10 @@ namespace Geocore
 
             //string path = @"settings.conf";
             // тут происходит неведомая хрень по выделению места под файл geosetting.conf
-            var geogenmobpath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),"geosettings.conf");
+            var geogenmobpath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "geosettings.conf");
             using (var conf = File.CreateText(geogenmobpath))
             {
-               conf.WriteLine(initjson);
+                conf.WriteLine(initjson);
             }
         }
 
@@ -78,38 +78,32 @@ namespace Geocore
         //Десериализуем полученную строку из файла JSON и
         // отправляем на сервер
 
-        public static void SendGEO(object n)
-        //public static async void SendGEO(object n)
+        // public static void SendGEO(object n)
+        public static async Task SendGEO(object n)
         {
-            Random rnd = new Random();
-            //string pathlog = @"sendgeo.log";
-
-            //string url = "https://localhost:44359/home/inputgeoJSON";
-            //string url = "http://random-red.ddns.net:62424/home/inputgeoJSON";
-            string jsonstr = printJSON();
-            GEO testgeo = JsonConvert.DeserializeObject<GEO>(jsonstr);
-
-           
-
-            int n1 = int.Parse(n.ToString()); //перобразовываем из n - object в n1 int 
-
             try
             {
+                Random rnd = new Random();
+                //string url = "https://localhost:44359/home/inputgeoJSON";
+                //string url = "http://random-red.ddns.net:62424/home/inputgeoJSON";
+                string jsonstr = printJSON();
+                GEO testgeo = JsonConvert.DeserializeObject<GEO>(jsonstr);
+
                 GeoCoordinates GCcore = new GeoCoordinates();
-                GCcore.InitGeoCoordinates();
+                await GCcore.InitGeoCoordinates();
+                int n1 = int.Parse(n.ToString()); //перобразовываем из n - object в n1 int   
+                                                  //try
+                                                  //{
+                                                  //GeoCoordinates GCcore = new GeoCoordinates();
                 for (int i = 0; i < n1; i++)
                 {
-                    GCcore.InitGeoCoordinates();
-                    testgeo.X = GCcore.XLatitude;
-                    testgeo.Y = GCcore.YLongitude;
-                    //testgeo.X = rnd.Next(99);
+                    Thread.Sleep(2000);
 
-                    //testgeo.Y = rnd.Next(99);
-
-                    
+                    await GCcore.InitGeoCoordinates();
+                    testgeo.X = GCcore.printXGeoCoordinates();
+                    testgeo.Y = GCcore.printYGeoCoordinates();
 
                     string json = JsonConvert.SerializeObject(testgeo);
-                    //Console.WriteLine("JSON: {0}", json);
 
                     var httpRequest = (HttpWebRequest)WebRequest.Create(testgeo.url0);
                     httpRequest.Method = "POST";
@@ -123,8 +117,9 @@ namespace Geocore
                     using (var responseStream = httpResponse.GetResponseStream())
                     using (var reader = new StreamReader(responseStream))
                     {
-                       string response = reader.ReadToEnd();
+                        string response = reader.ReadToEnd();
                     }
+                    //await GCcore.InitGeoCoordinates();
 
                 }
             }
@@ -148,16 +143,24 @@ namespace Geocore
         }
 
         //Создаём поток SendGEO
-        public static void startSend(int n0)
-        {            
-            Thread ThreadGenGC = new Thread(SendGEO);
-            ThreadGenGC.Start(n0);
-               // Console.WriteLine("Поток ThreadGenGC запущен");
-            ThreadGenGC.Join();
-            //Console.WriteLine("Повторить? (да - 1,нет - 0)");
-            //return "Отправка завершена.";
+        //public static void startSend(int n0)
+        //{            
+        //    Thread ThreadGenGC = new Thread(SendGEO);
+        //    ThreadGenGC.Start(n0);
+        //       // Console.WriteLine("Поток ThreadGenGC запущен");
+        //    ThreadGenGC.Join();
+        //    //Console.WriteLine("Повторить? (да - 1,нет - 0)");
+        //    //return "Отправка завершена.";
 
+        //}
+        public static void startSend(int n0)
+        {
+            SendGEO(n0);
         }
+        //public async Task startSend(int n0)
+        //{
+        //    await SendGEO(n0);
+        //}
 
 
     }
