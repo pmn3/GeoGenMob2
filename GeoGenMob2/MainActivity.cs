@@ -30,6 +30,8 @@ namespace GeoGenMob2
             EditText usertext = FindViewById<EditText>(Resource.Id.textInputEditText2);
             EditText devtext = FindViewById<EditText>(Resource.Id.textInputEditText3);
             EditText countertext = FindViewById<EditText>(Resource.Id.textInputEditText4);
+            EditText periodtext = FindViewById<EditText>(Resource.Id.textInputEditText5);
+
             TextView printtext = FindViewById<TextView>(Resource.Id.textView5);
             TextView printmess = FindViewById<TextView>(Resource.Id.textView6);
 
@@ -37,6 +39,8 @@ namespace GeoGenMob2
             Button savebutton = FindViewById<Button>(Resource.Id.button1);
             Button startbutton = FindViewById<Button>(Resource.Id.button2);
             Button geobutton = FindViewById<Button>(Resource.Id.button3);
+            Button StartGEObutton = FindViewById<Button>(Resource.Id.button4);
+
 
             //==========
 

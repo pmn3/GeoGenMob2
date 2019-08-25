@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <TableLayout
+    <TableLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_margin="5dp"
@@ -25,8 +25,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tableLayout1"
-                android:id="@+id/textInputEditText1" />                        
-        </TableRow> 
+                android:id="@+id/textInputEditText1" />
+        </TableRow>
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
@@ -42,9 +42,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tableLayout1"
-                android:id="@+id/textInputEditText2" />                        
-         </TableRow> 
-         <TableRow
+                android:id="@+id/textInputEditText2" />
+        </TableRow>
+        <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -59,20 +59,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tableLayout1"
-                android:id="@+id/textInputEditText3" />                        
-         </TableRow>
-         <TableRow
+                android:id="@+id/textInputEditText3" />
+        </TableRow>
+        <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <Button
                 android:text="save settings"
-                android:id="@+id/button1"                
+                android:id="@+id/button1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            </Button>                        
-         </TableRow>
-         <TableRow
+            </Button>
+        </TableRow>
+        <TableRow
             android:id="@+id/tableRow5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -87,41 +87,52 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tableLayout1"
-                android:id="@+id/textInputEditText4" />                        
-         </TableRow>
-         <TableRow
+                android:id="@+id/textInputEditText4" />
+        </TableRow>
+        <TableRow
             android:id="@+id/tableRow6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <Button
                 android:text="start"
-                android:id="@+id/button2"                
+                android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            </Button>                        
-         </TableRow>
-   </TableLayout>
-    <TextView
-                android:text="settings:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+            </Button>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="Start GEO"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tableLayout1"
-                android:id="@+id/textView5" />                      
-    <TextView
-                android:text="message:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/button4" />
+            <android.support.design.widget.TextInputEditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView5"
-                android:id="@+id/textView6" />
+                android:id="@+id/textInputEditText5" />
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:text="settings:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tableLayout1"
+        android:id="@+id/textView5" />
+    <TextView
+        android:text="message:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView5"
+        android:id="@+id/textView6" />
     <Button
         android:text="print GEO"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView6"
-        android:id="@+id/button3" /> 
-    
-
-
+        android:id="@+id/button3" />
 </RelativeLayout>
