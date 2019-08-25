@@ -83,7 +83,7 @@ namespace Geocore
         {
             try
             {
-                Random rnd = new Random();
+               // Random rnd = new Random();
                 //string url = "https://localhost:44359/home/inputgeoJSON";
                 //string url = "http://random-red.ddns.net:62424/home/inputgeoJSON";
                 string jsonstr = printJSON();
@@ -157,10 +157,15 @@ namespace Geocore
         {
             SendGEO(n0);
         }
-        //public async Task startSend(int n0)
-        //{
-        //    await SendGEO(n0);
-        //}
+
+        public async Task StartGeo(int m0, string time0, string STOP0)
+        {
+            while (STOP0 != "stop")
+            {
+                await SendGEO(1);
+                Thread.Sleep(m0);
+            }
+        }
 
 
     }

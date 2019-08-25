@@ -69,6 +69,22 @@ namespace GeoGenMob2
 
             };
 
+            StartGEObutton.Click += (sender, e) =>
+            {
+                // int n0 = int.Parse(countertext.Text);
+                //countertext.Text = "2";
+                int m0;
+                if (int.TryParse(countertext.Text, out m0))
+                {
+                   
+                }
+                else
+                {
+                    printmess.Text = "В поле counter укажите число.";
+                }
+
+            };
+
             GeoCoordinates GC = new GeoCoordinates();
             GC.InitGeoCoordinates();
 
