@@ -12,6 +12,8 @@ using System.Web;
 using Newtonsoft.Json;
 
 using GeoRecive;
+using GeoGenMob2;
+using Android.Widget;
 
 namespace Geocore
 {
@@ -153,22 +155,37 @@ namespace Geocore
         //    //return "Отправка завершена.";
 
         //}
+
+
+
         public static void startSend(int n0)
         {
             SendGEO(n0);
         }
+       
+        
+        
+        // TextView messtest = Fin   
+        GeoStartStop GS = new GeoStartStop();
 
-        public async Task StartGeo(int m0, string time0, string STOP0)
+        public async Task StartGeo(int m0)
         {
-            
-
-            while (STOP0 != "stop")
+//            GeoStartStop GS = new GeoStartStop();
+            int N = 0;
+            GS.initSTART();
+            while (GS.statusSTOP() != true)
             {
                 await SendGEO(1);
-                Thread.Sleep(m0);
+                N++;
+                GS.messagesend = "отправлено " + N + " раз";               
+                Thread.Sleep(m0);               
+
             }
         }
 
-
+        public async Task StopGeo()
+        {
+            GS.initSTOP();
+        }
     }
 }

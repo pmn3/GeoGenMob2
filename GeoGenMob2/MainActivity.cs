@@ -65,25 +65,24 @@ namespace GeoGenMob2
                 }
                 else
                 {
-                    printmess.Text = "В поле counter укажите число.";
+                    periodtext.Text = "В поле period укажите число.";
                 }
 
             };
 
-            GeoStartStop GS = new GeoStartStop();
 
             StartGEObutton.Click += (sender, e) =>
             {
                 // int n0 = int.Parse(countertext.Text);
                 //countertext.Text = "2";
                 int m0;
-                if (int.TryParse(countertext.Text, out m0))
+                if (int.TryParse(periodtext.Text, out m0))
                 {
-                   
+                    Geocore.Settings.startSend(m0);
                 }
                 else
                 {
-                    printmess.Text = "В поле counter укажите число.";
+                    printmess.Text = "В поле  укажите число.";
                 }
 
             };
@@ -94,8 +93,8 @@ namespace GeoGenMob2
             {
                 // int n0 = int.Parse(countertext.Text);
                 //countertext.Text = "2";
-                GS.stopgeo(false);
-                printmess.Text = "отправка координат остановлен";
+
+                printmess.Text = "";
 
 
             };
