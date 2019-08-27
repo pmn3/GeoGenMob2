@@ -10,13 +10,17 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+using Geocore;
+using System.Threading;
+using System.Threading.Tasks;
+
 namespace GeoGenMob2
 {
     public class GeoStartStop
     {
         bool STOP;
         public int period;
-        public string messagesend;
+        string messagesend;
 
         public GeoStartStop()
         {
@@ -53,5 +57,26 @@ namespace GeoGenMob2
             STOP = false;
             
         }
+
+        public  async Task StartGeo(int m0)
+        {
+            initSTART();
+            periodstart(m0);
+            int N = 0;
+            while(statusSTOP() != true)
+            {
+                N++;
+                await Geocore.Settings.SendGEO(1);
+                messagesend = "отправил " + N + "раз";
+                Thread.Sleep(period);
+            }
+        }
+
+        public void StopGeo()
+        {
+            initSTOP();
+        }
+
     }
+
 }

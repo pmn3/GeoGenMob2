@@ -99,7 +99,8 @@ namespace Geocore
                                                   //GeoCoordinates GCcore = new GeoCoordinates();
                 for (int i = 0; i < n1; i++)
                 {
-                    Thread.Sleep(2000);
+                    //Thread.Sleep(2000);
+                    Thread.Sleep(1000); //ждём одну секунду
 
                     await GCcore.InitGeoCoordinates();
                     testgeo.X = GCcore.printXGeoCoordinates();
@@ -166,26 +167,30 @@ namespace Geocore
         
         
         // TextView messtest = Fin   
-        GeoStartStop GS = new GeoStartStop();
+        //GeoStartStop GS = new GeoStartStop();
 
-        public async Task StartGeo(int m0)
-        {
-//            GeoStartStop GS = new GeoStartStop();
-            int N = 0;
-            GS.initSTART();
-            while (GS.statusSTOP() != true)
-            {
-                await SendGEO(1);
-                N++;
-                GS.messagesend = "отправлено " + N + " раз";               
-                Thread.Sleep(m0);               
+        //public  async Task StartGeo(int m0)
+        //{
+        //    //GeoStartStop GS = new GeoStartStop();
+        //    int N = 0;
+        //    GS.initSTART();
+        //    while (GS.statusSTOP() != true)
+        //    {
+        //        await SendGEO(1);
+        //        N++;
+        //        GS.messagesend = "отправлено " + N + " раз";               
+        //        Thread.Sleep(m0);               
 
-            }
-        }
+        //    }
+        //}
 
-        public async Task StopGeo()
-        {
-            GS.initSTOP();
-        }
+        //public static void StartSendGEO(int m1)
+        //{
+        //    StartGeo(m1);
+        //}
+        //public static void StopGeo()
+        //{
+        //    GS.initSTOP();
+        //}
     }
 }

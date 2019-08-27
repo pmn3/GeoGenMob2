@@ -70,7 +70,7 @@ namespace GeoGenMob2
 
             };
 
-
+            GeoStartStop GS = new GeoStartStop();
             StartGEObutton.Click += (sender, e) =>
             {
                 // int n0 = int.Parse(countertext.Text);
@@ -78,7 +78,8 @@ namespace GeoGenMob2
                 int m0;
                 if (int.TryParse(periodtext.Text, out m0))
                 {
-                    Geocore.Settings.startSend(m0);
+                    GS.StartGeo(m0);
+                    printmess.Text = "начал отправку координат";
                 }
                 else
                 {
@@ -93,8 +94,8 @@ namespace GeoGenMob2
             {
                 // int n0 = int.Parse(countertext.Text);
                 //countertext.Text = "2";
-
-                printmess.Text = "";
+                GS.StopGeo();
+                printmess.Text = GS.mess();
 
 
             };
