@@ -40,6 +40,7 @@ namespace GeoGenMob2
             Button startbutton = FindViewById<Button>(Resource.Id.button2);
             Button geobutton = FindViewById<Button>(Resource.Id.button3);
             Button StartGEObutton = FindViewById<Button>(Resource.Id.button4);
+            Button StopGEObutton  = FindViewById<Button>(Resource.Id.button5);
 
 
             //==========
@@ -69,6 +70,8 @@ namespace GeoGenMob2
 
             };
 
+            GeoStartStop GS = new GeoStartStop();
+
             StartGEObutton.Click += (sender, e) =>
             {
                 // int n0 = int.Parse(countertext.Text);
@@ -82,6 +85,18 @@ namespace GeoGenMob2
                 {
                     printmess.Text = "В поле counter укажите число.";
                 }
+
+            };
+
+
+
+            StopGEObutton.Click += (sender, e) =>
+            {
+                // int n0 = int.Parse(countertext.Text);
+                //countertext.Text = "2";
+                GS.stopgeo(false);
+                printmess.Text = "отправка координат остановлен";
+
 
             };
 

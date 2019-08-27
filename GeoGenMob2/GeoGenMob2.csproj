@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Geocore.cs" />
     <Compile Include="GeoRecive.cs" />
+    <Compile Include="GeoStartStop.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -160,6 +160,8 @@ namespace Geocore
 
         public async Task StartGeo(int m0, string time0, string STOP0)
         {
+            
+
             while (STOP0 != "stop")
             {
                 await SendGEO(1);
