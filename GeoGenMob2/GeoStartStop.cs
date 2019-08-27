@@ -16,6 +16,7 @@ namespace GeoGenMob2
     {
         bool STOP;
         int period;
+        int test;
 
         public void stopgeo(bool stop0)
         {
