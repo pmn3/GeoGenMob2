@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <TableLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -99,12 +100,49 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             </Button>
-        </TableRow>
+        </TableRow>        
+    </TableLayout> 
+
+   <TextView
+        android:text="message:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@id/tableLayout1"
+        android:id="@+id/textView6" />
+    <Button
+        android:text="print GEO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView6"
+        android:id="@+id/button3" />
+    <TextView
+        android:text="settings:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@id/button3"
+        android:id="@+id/textView5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textView5"
+        android:id="@+id/linearLayout1">
+       
+        <TableLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:id="@+id/tableLayout2">
         <TableRow
-            android:id="@+id/tableRow7"
+            android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <TextView
+           <TextView
                 android:text="period:"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="wrap_content"
@@ -118,7 +156,7 @@
                 android:id="@+id/textInputEditText5" />
         </TableRow>
         <TableRow
-            android:id="@+id/tableRow8"
+            android:id="@id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
@@ -127,42 +165,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tableLayout1"
-                android:id="@+id/textView8" />            
-        </TableRow>
+                android:id="@+id/textView8" />
+        </TableRow>   
         <TableRow
-            android:id="@+id/tableRow9"
+           android:id="@id/tableRow3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+        <Button
+            android:text="Start GEO"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-            <Button
-                android:text="Start GEO"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"                
-                android:id="@+id/button4" />
-            <Button
-                android:text="Stop GEO"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button5" />
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_below="@id/tableLayout1"
+            android:id="@+id/button4" />
+        <Button
+            android:text="Stop GEO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_below="@id/tableLayout1"
+            android:layout_toRightOf="@id/button4"
+            android:id="@+id/button5" />
         </TableRow>
-    </TableLayout>
-    <TextView
-        android:text="settings:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tableLayout1"
-        android:id="@+id/textView5" />
-    <TextView
-        android:text="message:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView5"
-        android:id="@+id/textView6" />
-    <Button
-        android:text="print GEO"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView6"
-        android:id="@+id/button3" />
+        </TableLayout>
+    </LinearLayout>
 </RelativeLayout>
