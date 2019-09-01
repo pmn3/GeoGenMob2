@@ -41,6 +41,7 @@ namespace GeoGenMob2
             Button geobutton = FindViewById<Button>(Resource.Id.button3);
             Button StartGEObutton = FindViewById<Button>(Resource.Id.button4);
             Button StopGEObutton  = FindViewById<Button>(Resource.Id.button5);
+            Button Settingsbutton = FindViewById<Button>(Resource.Id.button6);
 
 
             //==========
