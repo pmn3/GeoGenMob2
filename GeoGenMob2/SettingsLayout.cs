@@ -65,8 +65,8 @@ namespace GeoGenMob2
 
             Backbutton.Click += (sender, e) =>
             {
-                SetContentView(Resource.Layout.activity_main);
-
+                //SetContentView(Resource.Layout.activity_main);
+                Finish();
             };
             //============
         }
@@ -74,7 +74,7 @@ namespace GeoGenMob2
         {
             string text = "";
             string printjsonstr = Settings.printJSON(); //получаем сохранённый JSON
-            if (printjsonstr != null)
+            if ((printjsonstr != null)&(printjsonstr != "файл с настройками пуст"))
             {
                 Settings.GEO PrintGeoSet = JsonConvert.DeserializeObject<Settings.GEO>(printjsonstr); //разбираем JSON
                 text = "url: " + PrintGeoSet.url0 + "\n" + "user: " + PrintGeoSet.nameID + "\n" + "dev: " + PrintGeoSet.geonamedevice;

@@ -69,11 +69,11 @@ namespace GeoGenMob2
                 if (int.TryParse(periodtext.Text, out m0))
                 {
                     GS.StartGeo(m0);
-                    printmess.Text = "начал отправку координат";
+                    periodtext.Text = "Начал отправку координат";
                 }
                 else
                 {
-                    printmess.Text = "В поле  укажите число.";
+                    periodtext.Text = "В поле  укажите число.";
                 }
 
             };
@@ -103,7 +103,7 @@ namespace GeoGenMob2
 
             };
 
-            Settingsbutton.Click += delegate
+            Settingsbutton.Click += (sender, e)=>
             {
                 //SetContentView(Resource.Layout.layout_settings);
                 Intent intent = new Intent(this, typeof(SettingsLayout));

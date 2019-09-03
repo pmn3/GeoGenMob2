@@ -62,6 +62,7 @@ namespace Geocore
             {
                 //return "File not found";
                 urlline = "файл с настройками пуст";
+                return urlline;
             }
             using (var conf = File.OpenText(geogenmobpath))
             {
