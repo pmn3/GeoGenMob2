@@ -10,7 +10,7 @@ using Xamarin.Essentials;
 using Geocore;
 
 using GeoRecive;
-
+using Android.Content;
 
 namespace GeoGenMob2
 {
@@ -103,9 +103,11 @@ namespace GeoGenMob2
 
             };
 
-            Settingsbutton.Click += (sender, e) =>
+            Settingsbutton.Click += delegate
             {
-                SetContentView(Resource.Layout.layout_settings);
+                //SetContentView(Resource.Layout.layout_settings);
+                Intent intent = new Intent(this, typeof(SettingsLayout));
+                StartActivity(intent);
             };
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

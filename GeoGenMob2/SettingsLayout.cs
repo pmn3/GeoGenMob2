@@ -18,9 +18,10 @@ using GeoRecive;
 
 namespace GeoGenMob2
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
+    //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
     //class SettingsLayout : AppCompatActivity
-    class SettingsLayout : MainActivity
+    [Activity(Label = "layout_settings")]
+    public class SettingsLayout : MainActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -65,6 +66,7 @@ namespace GeoGenMob2
             Backbutton.Click += (sender, e) =>
             {
                 SetContentView(Resource.Layout.activity_main);
+
             };
             //============
         }
