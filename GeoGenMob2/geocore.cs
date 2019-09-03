@@ -20,17 +20,17 @@ namespace Geocore
     // public static class Settings
     public class Settings
     {
-        class GEO
+        public class GEO
         {
             public string url0;
             public string nameID;
             public string geonamedevice;
             public double X;
             public double Y;
-        }
+        }       
 
-        //SaveJSON  - Сохраняем настройки в файл JSON (Сереализация)
-        public static void SaveJSON(string url1, string user1, string dev1)
+                //SaveJSON  - Сохраняем настройки в файл JSON (Сереализация)
+                public static void SaveJSON(string url1, string user1, string dev1)
         // public async Task SaveJSON(string url1, string user1, string dev1)
         {
             GEO initgeo = new GEO();
@@ -49,8 +49,8 @@ namespace Geocore
             }
         }
 
-        //Читаем файл JSON и возвращаем его содержимое ввиде строки
-        private static string printJSON()
+        //Читаем файл JSON и возвращаем его содержимое ввиде строки (urlline)
+        public static string printJSON()
         //public async Task<string> printJSON()
         {
             string urlline = "";
@@ -60,7 +60,8 @@ namespace Geocore
             var geogenmobpath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "geosettings.conf");
             if (geogenmobpath == null || !File.Exists(geogenmobpath))
             {
-                return "File not found";
+                //return "File not found";
+                urlline = "файл с настройками пуст";
             }
             using (var conf = File.OpenText(geogenmobpath))
             {
