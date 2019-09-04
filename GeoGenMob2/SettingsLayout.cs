@@ -46,7 +46,8 @@ namespace GeoGenMob2
 
             Savebutton.Click += (sender, e) =>
             {
-                Geocore.Settings.SaveJSON(URLtext.Text, Usertext.Text, Devtext.Text); // сохраняем файл
+                string addurl = "/home/inputgeoJSON";
+                Geocore.Settings.SaveJSON(URLtext.Text+addurl, Usertext.Text, Devtext.Text); // сохраняем файл
                 CurrentSettingstext.Text = TestSettings();
 
                 //string printjsonstr = Settings.printJSON(); //получаем сохранённый JSON

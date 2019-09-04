@@ -87,7 +87,7 @@ namespace GeoGenMob2
                 // int n0 = int.Parse(countertext.Text);
                 //countertext.Text = "2";
                 GS.StopGeo();
-                printmess.Text = GS.mess();
+                info2.Text = GS.mess();
 
 
             };
