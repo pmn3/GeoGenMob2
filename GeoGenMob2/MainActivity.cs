@@ -31,7 +31,9 @@ namespace GeoGenMob2
             EditText periodtext = FindViewById<EditText>(Resource.Id.textInputEditText2);
 
             TextView printtext = FindViewById<TextView>(Resource.Id.textView1);
-            TextView printmess = FindViewById<TextView>(Resource.Id.textView2);
+            TextView printmess = FindViewById<TextView>(Resource.Id.textView2); //инфо1
+            TextView info2 = FindViewById<TextView>(Resource.Id.textView5);
+
 
 
             Button startbutton = FindViewById<Button>(Resource.Id.button1);
@@ -69,11 +71,11 @@ namespace GeoGenMob2
                 if (int.TryParse(periodtext.Text, out m0))
                 {
                     GS.StartGeo(m0);
-                    periodtext.Text = "Начал отправку координат";
+                    info2.Text = "Начал отправку координат";
                 }
                 else
                 {
-                    periodtext.Text = "В поле  укажите число.";
+                    info2.Text = "В поле  укажите число.";
                 }
 
             };

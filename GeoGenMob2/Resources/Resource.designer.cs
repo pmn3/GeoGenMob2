@@ -3457,8 +3457,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e004a
 			public const int SYM = 2131624010;
 			
-			// aapt resource value: 0x7f0e00d5
-			public const int action0 = 2131624149;
+			// aapt resource value: 0x7f0e00d3
+			public const int action0 = 2131624147;
 			
 			// aapt resource value: 0x7f0e0098
 			public const int action_bar = 2131624088;
@@ -3481,17 +3481,17 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e0074
 			public const int action_bar_title = 2131624052;
 			
-			// aapt resource value: 0x7f0e00d2
-			public const int action_container = 2131624146;
+			// aapt resource value: 0x7f0e00d0
+			public const int action_container = 2131624144;
 			
 			// aapt resource value: 0x7f0e0099
 			public const int action_context_bar = 2131624089;
 			
-			// aapt resource value: 0x7f0e00d9
-			public const int action_divider = 2131624153;
+			// aapt resource value: 0x7f0e00d7
+			public const int action_divider = 2131624151;
 			
-			// aapt resource value: 0x7f0e00d3
-			public const int action_image = 2131624147;
+			// aapt resource value: 0x7f0e00d1
+			public const int action_image = 2131624145;
 			
 			// aapt resource value: 0x7f0e0003
 			public const int action_menu_divider = 2131623939;
@@ -3508,11 +3508,11 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e0076
 			public const int action_mode_close_button = 2131624054;
 			
-			// aapt resource value: 0x7f0e00d4
-			public const int action_text = 2131624148;
+			// aapt resource value: 0x7f0e00d2
+			public const int action_text = 2131624146;
 			
-			// aapt resource value: 0x7f0e00e2
-			public const int actions = 2131624162;
+			// aapt resource value: 0x7f0e00e0
+			public const int actions = 2131624160;
 			
 			// aapt resource value: 0x7f0e0077
 			public const int activity_chooser_view_content = 2131624055;
@@ -3586,8 +3586,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e007d
 			public const int buttonPanel = 2131624061;
 			
-			// aapt resource value: 0x7f0e00d6
-			public const int cancel_action = 2131624150;
+			// aapt resource value: 0x7f0e00d4
+			public const int cancel_action = 2131624148;
 			
 			// aapt resource value: 0x7f0e0058
 			public const int center = 2131624024;
@@ -3601,8 +3601,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e0091
 			public const int checkbox = 2131624081;
 			
-			// aapt resource value: 0x7f0e00de
-			public const int chronometer = 2131624158;
+			// aapt resource value: 0x7f0e00dc
+			public const int chronometer = 2131624156;
 			
 			// aapt resource value: 0x7f0e006c
 			public const int clip_horizontal = 2131624044;
@@ -3664,8 +3664,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e0043
 			public const int end = 2131624003;
 			
-			// aapt resource value: 0x7f0e00e4
-			public const int end_padder = 2131624164;
+			// aapt resource value: 0x7f0e00e2
+			public const int end_padder = 2131624162;
 			
 			// aapt resource value: 0x7f0e0052
 			public const int enterAlways = 2131624018;
@@ -3718,8 +3718,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e007c
 			public const int icon = 2131624060;
 			
-			// aapt resource value: 0x7f0e00e3
-			public const int icon_group = 2131624163;
+			// aapt resource value: 0x7f0e00e1
+			public const int icon_group = 2131624161;
 			
 			// aapt resource value: 0x7f0e002c
 			public const int icon_only = 2131623980;
@@ -3730,8 +3730,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e0079
 			public const int image = 2131624057;
 			
-			// aapt resource value: 0x7f0e00df
-			public const int info = 2131624159;
+			// aapt resource value: 0x7f0e00dd
+			public const int info = 2131624157;
 			
 			// aapt resource value: 0x7f0e0073
 			public const int italic = 2131624051;
@@ -3766,11 +3766,11 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e007b
 			public const int list_item = 2131624059;
 			
-			// aapt resource value: 0x7f0e00e6
-			public const int masked = 2131624166;
+			// aapt resource value: 0x7f0e00e4
+			public const int masked = 2131624164;
 			
-			// aapt resource value: 0x7f0e00d8
-			public const int media_actions = 2131624152;
+			// aapt resource value: 0x7f0e00d6
+			public const int media_actions = 2131624150;
 			
 			// aapt resource value: 0x7f0e00a7
 			public const int message = 2131624103;
@@ -3802,14 +3802,14 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e0027
 			public const int normal = 2131623975;
 			
-			// aapt resource value: 0x7f0e00e1
-			public const int notification_background = 2131624161;
+			// aapt resource value: 0x7f0e00df
+			public const int notification_background = 2131624159;
 			
-			// aapt resource value: 0x7f0e00db
-			public const int notification_main_column = 2131624155;
+			// aapt resource value: 0x7f0e00d9
+			public const int notification_main_column = 2131624153;
 			
-			// aapt resource value: 0x7f0e00da
-			public const int notification_main_column_container = 2131624154;
+			// aapt resource value: 0x7f0e00d8
+			public const int notification_main_column_container = 2131624152;
 			
 			// aapt resource value: 0x7f0e006b
 			public const int outline = 2131624043;
@@ -3838,11 +3838,11 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e0060
 			public const int right = 2131624032;
 			
-			// aapt resource value: 0x7f0e00e0
-			public const int right_icon = 2131624160;
+			// aapt resource value: 0x7f0e00de
+			public const int right_icon = 2131624158;
 			
-			// aapt resource value: 0x7f0e00dc
-			public const int right_side = 2131624156;
+			// aapt resource value: 0x7f0e00da
+			public const int right_side = 2131624154;
 			
 			// aapt resource value: 0x7f0e0028
 			public const int satellite = 2131623976;
@@ -3958,8 +3958,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e0061
 			public const int start = 2131624033;
 			
-			// aapt resource value: 0x7f0e00d7
-			public const int status_bar_latest_event_content = 2131624151;
+			// aapt resource value: 0x7f0e00d5
+			public const int status_bar_latest_event_content = 2131624149;
 			
 			// aapt resource value: 0x7f0e0066
 			public const int stretch = 2131624038;
@@ -3993,12 +3993,6 @@ namespace GeoGenMob2
 			
 			// aapt resource value: 0x7f0e00ba
 			public const int tableRow5 = 2131624122;
-			
-			// aapt resource value: 0x7f0e00d0
-			public const int tableRow6 = 2131624144;
-			
-			// aapt resource value: 0x7f0e00d1
-			public const int tableRow7 = 2131624145;
 			
 			// aapt resource value: 0x7f0e001e
 			public const int tag_transition_group = 2131623966;
@@ -4063,8 +4057,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e001a
 			public const int textinput_helper_text = 2131623962;
 			
-			// aapt resource value: 0x7f0e00dd
-			public const int time = 2131624157;
+			// aapt resource value: 0x7f0e00db
+			public const int time = 2131624155;
 			
 			// aapt resource value: 0x7f0e0023
 			public const int title = 2131623971;
@@ -4114,8 +4108,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e001b
 			public const int view_offset_helper = 2131623963;
 			
-			// aapt resource value: 0x7f0e00e5
-			public const int visible = 2131624165;
+			// aapt resource value: 0x7f0e00e3
+			public const int visible = 2131624163;
 			
 			// aapt resource value: 0x7f0e00bd
 			public const int webview = 2131624125;
