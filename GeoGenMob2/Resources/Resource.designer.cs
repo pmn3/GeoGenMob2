@@ -3568,17 +3568,17 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e00be
 			public const int browser_actions_menu_view = 2131624126;
 			
-			// aapt resource value: 0x7f0e00ad
-			public const int button1 = 2131624109;
+			// aapt resource value: 0x7f0e00ae
+			public const int button1 = 2131624110;
 			
 			// aapt resource value: 0x7f0e00b0
 			public const int button2 = 2131624112;
 			
-			// aapt resource value: 0x7f0e00b8
-			public const int button3 = 2131624120;
+			// aapt resource value: 0x7f0e00b7
+			public const int button3 = 2131624119;
 			
-			// aapt resource value: 0x7f0e00b9
-			public const int button4 = 2131624121;
+			// aapt resource value: 0x7f0e00b8
+			public const int button4 = 2131624120;
 			
 			// aapt resource value: 0x7f0e00bb
 			public const int button5 = 2131624123;
@@ -3985,14 +3985,14 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e00ac
 			public const int tableRow2 = 2131624108;
 			
-			// aapt resource value: 0x7f0e00ae
-			public const int tableRow3 = 2131624110;
+			// aapt resource value: 0x7f0e00ad
+			public const int tableRow3 = 2131624109;
 			
-			// aapt resource value: 0x7f0e00b7
-			public const int tableRow4 = 2131624119;
+			// aapt resource value: 0x7f0e00b6
+			public const int tableRow4 = 2131624118;
 			
-			// aapt resource value: 0x7f0e00ba
-			public const int tableRow5 = 2131624122;
+			// aapt resource value: 0x7f0e00b9
+			public const int tableRow5 = 2131624121;
 			
 			// aapt resource value: 0x7f0e001e
 			public const int tag_transition_group = 2131623966;
@@ -4042,8 +4042,8 @@ namespace GeoGenMob2
 			// aapt resource value: 0x7f0e00b4
 			public const int textView4 = 2131624116;
 			
-			// aapt resource value: 0x7f0e00b6
-			public const int textView5 = 2131624118;
+			// aapt resource value: 0x7f0e00ba
+			public const int textView5 = 2131624122;
 			
 			// aapt resource value: 0x7f0e00ce
 			public const int text_input_password_toggle = 2131624142;
