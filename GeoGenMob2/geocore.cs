@@ -23,10 +23,12 @@ namespace Geocore
         public class GEO
         {
             public string url0;
-            public string nameID;
+            public string NameUser;
             public string geonamedevice;
-            public double X;
-            public double Y;
+            public double LatitudeX;
+            public double LongitudeY;
+            public string geoDT; //date
+            public string geoTM; //time
         }       
 
                 //SaveJSON  - Сохраняем настройки в файл JSON (Сереализация)
@@ -35,7 +37,7 @@ namespace Geocore
         {
             GEO initgeo = new GEO();
             initgeo.url0 = url1;
-            initgeo.nameID = user1;
+            initgeo.NameUser = user1;
             initgeo.geonamedevice = dev1;
 
             string initjson = JsonConvert.SerializeObject(initgeo);
@@ -87,7 +89,8 @@ namespace Geocore
         {
             try
             {
-               // Random rnd = new Random();
+                DateTime localDate = DateTime.Now;  //получаем время
+                // Random rnd = new Random();
                 //string url = "https://localhost:44359/home/inputgeoJSON";
                 //string url = "http://random-red.ddns.net:62424/home/inputgeoJSON";
                 string jsonstr = printJSON();
@@ -105,8 +108,10 @@ namespace Geocore
                     Thread.Sleep(1000); //ждём одну секунду
 
                     await GCcore.InitGeoCoordinates();
-                    testgeo.X = GCcore.printXGeoCoordinates();
-                    testgeo.Y = GCcore.printYGeoCoordinates();
+                    testgeo.LatitudeX = GCcore.printXGeoCoordinates();
+                    testgeo.LongitudeY = GCcore.printYGeoCoordinates();
+                    testgeo.geoDT = localDate.ToString("dd.MM.yyyy");
+                    testgeo.geoTM = localDate.ToString("HH:mm:ss");
 
                     string json = JsonConvert.SerializeObject(testgeo);
 

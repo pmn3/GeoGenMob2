@@ -21,6 +21,7 @@ namespace GeoRecive
         public double XLatitude;
         public double YLongitude;
 
+
         //public void InitGeoCoordinates()
         public async Task InitGeoCoordinates()
 

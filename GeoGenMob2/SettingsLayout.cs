@@ -78,7 +78,7 @@ namespace GeoGenMob2
             if ((printjsonstr != null)&(printjsonstr != "файл с настройками пуст"))
             {
                 Settings.GEO PrintGeoSet = JsonConvert.DeserializeObject<Settings.GEO>(printjsonstr); //разбираем JSON
-                text = "url: " + PrintGeoSet.url0 + "\n" + "user: " + PrintGeoSet.nameID + "\n" + "dev: " + PrintGeoSet.geonamedevice;
+                text = "url: " + PrintGeoSet.url0 + "\n" + "user: " + PrintGeoSet.NameUser + "\n" + "dev: " + PrintGeoSet.geonamedevice;
                 //CurrentSettingstext.Text = "url: " + PrintGeoSet.url0 + "\n" + "user: " + PrintGeoSet.nameID + "\n" + "dev: " + PrintGeoSet.geonamedevice;
             }
             else
